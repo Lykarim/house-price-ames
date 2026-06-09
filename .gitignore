@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data & models (trop lourds pour git)
+data/input/
+data/output/
+
+# Modèles sérialisés — gérés par DVC
+models/*.dill
+
+# Reports : on versionne les PNG, pas le HTML lourd
+reports/*.html
+
+# MLFlow
+notebooks/mlruns/
+
+# Artefacts CatBoost
+notebooks/catboost_info/
+
+# Ancien notebook (remplacé par house_price_0*.ipynb)
+notebooks/01-exploration-modeling.ipynb
+
+# Env
+.env
+*.env
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+/.claude/
