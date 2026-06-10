@@ -121,7 +121,7 @@ jobs:
       - name: Installation Railway CLI
         shell: bash
         run: |
-          curl -fsSL https://railway.app/install.sh | sh
+          curl -fsSL https://railway.app/install.sh | bash
           echo "$HOME/.railway/bin" >> "$GITHUB_PATH"
 
       - name: Déploiement sur Railway
