@@ -2,7 +2,8 @@
 
 Projet Data Science — prédiction du prix de vente de maisons individuelles sur le dataset **Ames Housing** (Iowa, USA, 1 460 observations × 81 variables).
 
-[![CI](https://github.com/kira9292/house-price/actions/workflows/ci.yml/badge.svg)](https://github.com/kira9292/house-price/actions/workflows/ci.yml)
+[![CI](https://github.com/Lykarim/house-price-ames/actions/workflows/ci.yml/badge.svg)](https://github.com/Lykarim/house-price-ames/actions/workflows/ci.yml)
+[![API](https://img.shields.io/badge/API-Railway-live-green)](https://clever-harmony-production-ced2.up.railway.app/docs)
 
 ---
 
@@ -95,8 +96,8 @@ Pipeline final : CV-RMSE **26 418 $** (+1 237 $ vs baseline).
 ## Installation
 
 ```bash
-git clone https://github.com/kira9292/house-price.git
-cd house-price
+git clone https://github.com/Lykarim/house-price-ames.git
+cd house-price-ames
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -163,13 +164,16 @@ cd notebooks && mlflow ui --port 5001
 
 ---
 
-## CI/CD — 3 jobs séquentiels
+## CI/CD — 4 jobs séquentiels
 
 ```
 push → tests unitaires (11 tests)
           → pipeline DVC (entraînement + metrics.json)
                → tests API (9 tests) + docker build
+                    → déploiement Railway (main uniquement)
 ```
+
+**API déployée :** https://clever-harmony-production-ced2.up.railway.app/docs
 
 ---
 
@@ -187,4 +191,4 @@ push → tests unitaires (11 tests)
 | Encodage | category-encoders (TargetEncoder) |
 | Sérialisation | dill |
 | Tests | pytest (20 tests) |
-| CI/CD | GitHub Actions (3 jobs) |
+| CI/CD | GitHub Actions (4 jobs) + Railway |
