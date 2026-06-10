@@ -17,8 +17,7 @@ build/
 data/input/
 data/output/
 
-# Modèles sérialisés — inclus pour le déploiement Railway
-# models/*.dill
+# Modèles sérialisés — versionnés pour le déploiement Railway
 
 # Reports : on versionne les PNG, pas le HTML lourd
 reports/*.html
