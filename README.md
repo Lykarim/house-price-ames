@@ -164,14 +164,15 @@ cd notebooks && mlflow ui --port 5001
 
 ---
 
-## CI/CD — 4 jobs séquentiels
+## CI/CD — 3 jobs séquentiels + déploiement automatique Railway
 
 ```
 push → tests unitaires (11 tests)
           → pipeline DVC (entraînement + metrics.json)
                → tests API (9 tests) + docker build
-                    → déploiement Railway (main uniquement)
 ```
+
+Railway redéploie automatiquement à chaque push sur `main` via l'intégration GitHub.
 
 **API déployée :** https://clever-harmony-production-ced2.up.railway.app/docs
 
@@ -191,4 +192,4 @@ push → tests unitaires (11 tests)
 | Encodage | category-encoders (TargetEncoder) |
 | Sérialisation | dill |
 | Tests | pytest (20 tests) |
-| CI/CD | GitHub Actions (4 jobs) + Railway |
+| CI/CD | GitHub Actions (3 jobs) + Railway (déploiement auto) |
