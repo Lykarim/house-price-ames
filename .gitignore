@@ -43,3 +43,7 @@ notebooks/01-exploration-modeling.ipynb
 .idea/
 .vscode/
 /.claude/
+
+# Docs internes (non destinés au prof)
+docs/PROJET.md
+docs/laplace_immo_presentation.pptx
