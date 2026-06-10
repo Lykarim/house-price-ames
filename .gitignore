@@ -17,8 +17,8 @@ build/
 data/input/
 data/output/
 
-# Modèles sérialisés — gérés par DVC
-models/*.dill
+# Modèles sérialisés — inclus pour le déploiement Railway
+# models/*.dill
 
 # Reports : on versionne les PNG, pas le HTML lourd
 reports/*.html
