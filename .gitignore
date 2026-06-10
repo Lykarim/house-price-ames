@@ -47,3 +47,4 @@ notebooks/01-exploration-modeling.ipynb
 # Docs internes (non destinés au prof)
 docs/PROJET.md
 docs/laplace_immo_presentation.pptx
+docs/generate_presentation.py
